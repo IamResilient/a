@@ -1,0 +1,78 @@
+#container {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 700px;
+  height: 100%;
+}
+
+.body {
+	position: relative;
+	padding-top: 72px;
+	min-height: calc(100% - 72px);
+}
+
+
+mat-card {
+  width: 70%;
+  margin-left: auto; margin-right: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  padding: 30px 10px;
+}
+
+mat-card-header {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-weight: 500;
+  margin: 0 10px;
+  padding-bottom: 20px;
+  width: 50%;
+  border-bottom: 1px #DDD solid;
+
+}
+
+mat-card-content {
+  display: flex;
+  width: 100%;
+}
+
+mat-card-content div {
+  width: 50%;
+  padding: 30px 20px;
+}
+
+mat-card-content div.simplecheckout-left-column mat-form-field {
+  width: 100%
+}
+
+mat-card-content div.simplecheckout-right-column table {
+  width: 100%;
+  margin-top: 55px;
+
+}
+
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+
+mat-card-actions {
+  margin: 15px 20px;
+}
+
+mat-card-actions a {
+  display: block;
+  padding: 10px 10px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+  background-color: #0097c7;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid #0097c7;
+  width: 200px;
+}
+
+mat-card-content, mat-card-actions {
+  grid-template-columns: 1fr;
+}

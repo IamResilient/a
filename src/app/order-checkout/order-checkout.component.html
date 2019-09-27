@@ -1,0 +1,84 @@
+<div #container class="container">
+  <app-header id="header"></app-header>
+  <div class="body"></div>
+    <mat-card>
+      <mat-card-header>
+        Оформление заказа
+      </mat-card-header>
+      <mat-card-content>
+        <div class="simplecheckout-left-column">
+          <h3>Основная информация</h3>
+          <mat-form-field appearance="outline">
+            <mat-label>Имя</mat-label>
+            <input matInput type="text">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>E-mail</mat-label>
+            <input matInput type='text'>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Телефон </mat-label>
+            <input matInput type='text'>
+          </mat-form-field>
+          <h3>Адрес</h3>
+          <mat-form-field appearance="outline">
+            <mat-label>Город</mat-label>
+            <input matInput type='text'>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Улица</mat-label>
+            <input matInput type='text'>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Дом</mat-label>
+            <input matInput type='text'>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Квартира/офис</mat-label>
+            <input matInput type='text'>
+          </mat-form-field>
+          <h4>Способ оплаты</h4>
+          <mat-radio-group aria-label="Select an option">
+            <mat-radio-button value="1" checked>Оплата наличными</mat-radio-button>
+            <mat-radio-button value="2">Оплата картой курьеру</mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <div class="simplecheckout-right-column">
+          <table mat-table [dataSource]="transactions" class="mat-elevation-z8">
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef> Наименование </th>
+              <td mat-cell *matCellDef="let transaction"> {{transaction.name}} </td>
+              <td mat-footer-cell *matFooterCellDef></td>
+            </ng-container>
+
+            <ng-container matColumnDef="cost">
+              <th mat-header-cell *matHeaderCellDef> Цена </th>
+              <td mat-cell *matCellDef="let transaction"> {{transaction.cost}} р </td>
+              <td mat-footer-cell *matFooterCellDef></td>
+            </ng-container>
+
+            <ng-container matColumnDef="count">
+              <th mat-header-cell *matHeaderCellDef> Кол-во </th>
+              <td mat-cell *matCellDef="let transaction"> х {{transaction.count}} </td>
+              <td mat-footer-cell *matFooterCellDef> Итого: </td>
+            </ng-container>
+
+            <ng-container matColumnDef="totalCost">
+              <th mat-header-cell *matHeaderCellDef> Итого </th>
+              <td mat-cell *matCellDef="let transaction" style="font-weight: 500"> {{transaction.cost * transaction.count}} р </td>
+              <td mat-footer-cell *matFooterCellDef>{{getTotalCost()}}</td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns" style="background-color: #f8f8f8"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            <tr mat-footer-row *matFooterRowDef="displayedColumns" style="background-color: #f8f8f8"></tr>
+          </table>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <a>Submit</a>
+      </mat-card-actions>
+  </mat-card>
+<div class="body"></div>
+</div>
+
