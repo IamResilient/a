@@ -5,16 +5,16 @@
   height: 100%;
 }
 
-.body {
+#body {
 	position: relative;
-	padding-top: 72px;
-	min-height: calc(100% - 72px);
+	padding: 20px 0;
+	min-height: 100%
 }
-
 
 mat-card {
   width: 70%;
-  margin-left: auto; margin-right: auto;
+  min-width: 1060px;
+  margin: 0 auto;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
   padding: 30px 10px;
 }
@@ -26,8 +26,6 @@ mat-card-header {
   margin: 0 10px;
   padding-bottom: 20px;
   width: 50%;
-  border-bottom: 1px #DDD solid;
-
 }
 
 mat-card-content {
@@ -47,7 +45,6 @@ mat-card-content div.simplecheckout-left-column mat-form-field {
 mat-card-content div.simplecheckout-right-column table {
   width: 100%;
   margin-top: 55px;
-
 }
 
 .mat-radio-button ~ .mat-radio-button {

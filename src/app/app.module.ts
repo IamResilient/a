@@ -6,14 +6,16 @@ import { AppComponent } from './app.component';
 import { OrderCheckoutComponent } from './order-checkout/order-checkout.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatCardModule, MatFormFieldModule, MatInputModule, MatRadioModule, MatTableModule } from '@angular/material';
+import { MatCardModule, MatFormFieldModule, MatInputModule, MatRadioModule, MatTableModule, MatIconModule } from '@angular/material';
 import { HeaderComponent } from './header/header.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OrderCheckoutComponent,
-    HeaderComponent
+    HeaderComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +25,8 @@ import { HeaderComponent } from './header/header.component';
     MatFormFieldModule,
     MatInputModule,
     MatRadioModule,
-    MatTableModule
+    MatTableModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

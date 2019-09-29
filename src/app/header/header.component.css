@@ -1,33 +1,34 @@
-#header {
-  position: fixed;
-  width: 100%;
-  margin: 0;
-  z-index: 1;
-  height: auto!important;
-  background: rgba(0,0,0,.5);
+.header {
+  max-width: 1280px;
+  mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
+  margin: 0 auto;
+  min-width: 1060px;
 }
 
-.main-nav {
+.header ul {
+  text-align: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+  width: 100%;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+.header ul li {
+  display: inline-block;
+}
+
+.header ul li a {
+  padding: 20px;
+  font-family: "Roboto";
+  color: rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.4);
+  font-size: 25px;
+  text-decoration: none;
   display: block;
 }
 
-.main-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.main-nav ul li {
-  float: left;
-  margin-left: 3px;
-  margin-right: 3px;
-}
-
-.main-nav ul li a {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  line-height: 60px!important;
-  font-size: 12px;
-  font-weight: 700;
-  font-style: normal;
-  letter-spacing: 3px;
+.header ul li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
 }
